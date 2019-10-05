@@ -1,0 +1,110 @@
+/* 
+File Name: Style.css
+Last Modified: 26-10-2018
+*/
+
+body {
+	background-image: url("images/t.jpg");   
+	 /* displays a background image for the webpage 
+	 sourced from https://www.vecteezy.com/vector-art/189110-diamond-shape-golden-pattern-vector-background */
+	 
+	 /* Centers the background to the middle of the web page  */
+	background-position: center;   
+	/*  Ensure that the entire the web page is covers the page with the background image */
+	
+	/* the web page will have a margin to the left of 1cm */
+	margin-left: 1cm;			
+	/* setting a list of fonts available for the browser to choose from left to right */
+	font-family: Georgia, arial, serif; 	
+	/* the color of the body will be black unless overwritten by a embedded or inline style */
+	color: black;                      
+} 
+ h1 {
+	/* transforming the text into uppercase and coloring the text to yellow */
+	text-transform: uppercase;
+	/* Setting the color of the main heading to red */ 
+	color: red;
+	/* The background-color of the main heading will be white */
+	background-color: white;
+	/* The following code will align the main heading to be in the middle of the webpage */
+	text-align:center;
+ }
+ 
+ h2 {
+	 /* transforming the text into uppercase*/
+	 text-transform: uppercase;
+	 /* The colour of the h2 heading will be red */
+	 color:red;
+	 /* Settting the background of the webpage */
+	 background-color: #990000; 
+	 /* The colour of the webpage will be white */
+	 color:white;
+ }
+ 
+ /* turns the color of any piece of text within a span to blue */ 
+ span { 
+	color: blue;
+ }
+ 
+ /* Assigning the background color of the navigation links through the webpages */
+ #nav {
+	background-color: #ffff99; 
+ }
+  
+ /* The following lines of code are used to distinguish the links that have been visited, not-visted, hovered over and active */
+ a:link { color: red; text-decoration: none;}
+ a:visited { color: #0066ff; }
+ a:hover { color: black; font-size:130%;}
+ a:active {color: #996633; }
+ 
+/* the paragraph tag with id introduction will appear with a text size x130 greater than the surrounding 
+paragraphs
+the text colour of the paragraph will be navy
+*/ 
+ #introduction {
+	 font-size: 130%;
+	 color: navy;
+ }
+
+/* 
+the address tag with the id copyright will be aligned to the right of every webpage in the website 
+*/ 
+ #copyright {
+	 text-align: right;
+	 color: black;
+	 background-color: white;
+ }
+ 
+/* 	all images within html file will: 
+	float to the left of the webpage unles changed by an embedded or inline style  
+	the edges of the pictures/images will be rounded 8px
+	the images/pictures will have a padding around them of 5px 
+	the border around the images/pictures will a border around it which be black 
+	it will have a margin of 5px around it
+*/
+ img{
+	 float: left;
+	 border-radius: 8px;
+	 padding: 5px;
+	 border: 1px solid #000;
+	 margin: 5px;
+	 clear: both;
+ }
+ 
+/* the div on the webpage with the id 'ffs' will be appear as a teal coloured text 
+a list of fonts are suppilied to the browser 
+from left to right. if the far left font fails then the next font will be used, until a valid font can be 
+used */
+ div.ffs{ 
+	color: teal;
+	font-family: 'Courier New', Lucida, Console; 
+ }
+ 
+ /* The following code for paragraphs in the webpages will style the 'p' tags so that they have a border around
+	of 1px. The overflow will allow that pictures to fit inside the border. This is done by increasing/decreasing
+	the size of the border height to ensure that the img fits between the border. 
+ */
+ p {
+		border: 1px solid #000;
+		overflow: auto;
+  }

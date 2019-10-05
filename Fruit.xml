@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding = "utf-8"?>
+<?xml-stylesheet type="text/xsl" href="convert.xsl"?>
+
+<!DOCTYPE ofm [
+	<!ELEMENT ofm (goodsType)> 
+	<!ELEMENT goodsType (goods*) >
+		<!ATTLIST goodsType sort CDATA #REQUIRED>
+		
+	<!ELEMENT goods (goodsName, goodsPicture, farm, delivery)> 
+	<!ELEMENT goodsName (#PCDATA)>
+	<!ELEMENT goodsPicture (#PCDATA)> 
+	
+	<!ELEMENT farm (farmName, farmPicture, farmDescription, farmURL, farmAddress, farmLogo?, farmPhoneNumber, farmOwner*, farmEstablished, numberOfEmployees)> 
+		<!ELEMENT farmName (#PCDATA)>
+		<!ELEMENT farmPicture (#PCDATA)>
+		<!ELEMENT farmDescription (#PCDATA)> 
+		<!ELEMENT farmURL (#PCDATA)> 
+		<!ELEMENT farmAddress (#PCDATA)> 
+		<!ELEMENT farmLogo (#PCDATA)> 
+		<!ELEMENT farmPhoneNumber (#PCDATA)> 
+		<!ELEMENT farmOwner (#PCDATA)> 
+		<!ELEMENT farmEstablished (#PCDATA)> 
+		<!ELEMENT numberOfEmployees (#PCDATA)> 
+		
+	<!ELEMENT delivery (currency, minimumPrice, deliveryFee)> 
+		<!ELEMENT currency (#PCDATA)>
+		<!ELEMENT minimumPrice (#PCDATA)> 
+		<!ELEMENT deliveryFee (#PCDATA)> 
+				
+	<!ENTITY AUD "Australian Dollar"> 
+	<!ENTITY USD "United States Dollar"> 
+]>
+
+
+<ofm> 
+	<goodsType sort="Fruit"> 
+		<!-- Farm 1--> 
+		<goods> 
+			<goodsName>Watermelon</goodsName>
+			<!-- image sourced from https://www.google.com.au/search?q=watermelon&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiP1LvFn6DeAhVLWisKHSeJDjMQ_AUIDigB&biw=1368&bih=771#imgrc=Jb4wipJllusQuM: --> 
+			<goodsPicture> images/watermelon.jpg</goodsPicture> 
+			<farm>
+				<farmName>Oak Farm</farmName> 
+				<!-- image sourced from: http://www.ncfieldfamily.org/wp-content/uploads/1760816MCSFRE1943.jpg -->
+				<farmPicture>images/OF_FARM.jpg</farmPicture> 
+				<farmDescription> 
+					Oak Farm (OF), owned by Vic Rich, is one of the newest farms in the watermelon industry. This farm was established 18 years ago and currently has a total 
+					of 900 employees that work onsite to grow and export the watermelons across Australia. The farm only exports within Australia at the moment, but intents to 
+					export internationally within the next 10 years. OF is currently seen as a major contender in the watermelon export industry and is set to be the leading 
+					exporter of watermelons within the next 30 to 40 years. 
+					</farmDescription> 
+				<farmURL>www.oakfarm.org.au</farmURL>
+				<farmAddress> 181 Oak Road, Oakvel</farmAddress> 
+				<!-- image sourced:  https://www.google.com.au/search?tbm=isch&q=watermelon&chips=q:watermelon,g_1:cute:Dk1wMHTWe3A%3D&usg=AI4_-kQMMtBljvmbG0r0dAwxTKbbsNaElg&sa=X&ved=0ahUKEwiQ0OvHn6DeAhUEEnIKHYUuAhoQ4lYIKygC&biw=1368&bih=722&dpr=2#imgrc=0w6hODJ2TDYNdM: --> 
+				<farmLogo>images/OF_FARM_LOGO.jpg</farmLogo> 
+				<farmPhoneNumber>0437 567 987</farmPhoneNumber>
+				<farmOwner>Vic Rich</farmOwner>
+				<farmEstablished>2000</farmEstablished> 
+				<numberOfEmployees>900</numberOfEmployees> 
+			</farm> 
+			<delivery> 
+				<currency> &AUD; </currency> 
+				<minimumPrice> 10 </minimumPrice>
+				<deliveryFee> 10 </deliveryFee>
+			</delivery>
+		</goods>
+		
+		<!-- Farm 2--> 
+		<goods> 
+			<goodsName>Mango</goodsName>
+			<!-- image sourced: https://exoticfruitbox.com/wp-content/uploads/2015/10/mango.jpg --> 
+			<goodsPicture>images/mango.jpg</goodsPicture> 
+			<farm> 
+				<farmName>Moonshadow Lands</farmName> 
+				<!-- sourced from: https://www.healthbenefitstimes.com/9/gallery/cabbage/Cabbage-farm.jpg -->
+				<farmPicture>images/MSL_FARM.jpg</farmPicture> 
+				<farmDescription> 
+					Moonshadow Lands is currently the one and only exporter of cabbages in Australia that directly exports cabbages to the USA only. Established in 2007 by CEO Ben Smith, 
+					Moonshadow Lands currently employs 10,000 staff members to grow, pack and export the cabbages directly to the USA. The farm is the one of the few farms across the globe 
+					that exports fresh cabbages to the USA within 2 days and also holds the title of The worlds fastest and largest producer of cabbages. This farm also produces mango 
+					produce, however it is only sold within Australia, as the mangoes undergo severe damage when exported overseas. Although, the company is researching in ways they can 
+					prevent the damage to the produce and hopes that a viable solution can be found soon so it can start export to the USA. 
+					</farmDescription> 
+				<farmURL>www.moonshadowslands.org.au</farmURL>
+				<farmAddress>179_Moon Drive,Moon</farmAddress> 
+				<!-- image sourced: "https://www.siggraph.org/sites/default/files/org.flat.logo.400_0.jpg" -->
+				<farmLogo> images/MSL_FARM_LOGO.jpg</farmLogo> 
+				<farmPhoneNumber>045 678 368</farmPhoneNumber>
+				<farmOwner>Ben Smith</farmOwner>
+				<farmEstablished>2007</farmEstablished> 
+				<numberOfEmployees>10 000</numberOfEmployees> 
+			</farm> 
+			<delivery> 
+				<currency> &USD; </currency> 
+				<minimumPrice>20</minimumPrice>
+				<deliveryFee>15</deliveryFee>
+			</delivery>
+		</goods>
+		
+		<!-- Farm 3--> 
+		<goods> 
+			<goodsName>Orange</goodsName>
+			<!-- image source: https://www.producemarketguide.com/sites/default/files/Commodities.tar/Commodities/oranges_commodity-page.png -->
+			<goodsPicture> images/oranges.jpg</goodsPicture> 
+			<farm>
+				<farmName>Haywire Ranch</farmName> 
+				<!-- image sourced : https://media.gettyimages.com/photos/orchard-of-mandarin-orange-trees-picture-id543996112?b=1&k=6&m=543996112&s=612x612&w=0&h=poIB7Upr4obs-oQf5NAEu5H1plCNjSLjU7Vrxj1jje0= --> 
+				<farmPicture>images/HR_FARM.jpg</farmPicture> 
+				<farmDescription> 
+					Haywire Ranch is a farm owned and founded by CEO Kevin Bacon, who is known is well known across the globe for his business endeavours in fields such as technology, farms 
+					and travel. The farm was established in 2005 and has 100,000 staff members that work across the farm fields such as customer support. The farm produces some of the best
+					oranges across the globe, but it only sells the oranges to the USA only. Mr Bacon is currently planning on expanding the exporting business to other countries within the 
+					next couple of years. 
+					</farmDescription> 
+				<farmURL>www.HaywireRanch.com.au</farmURL>
+				<farmAddress>21 Nector Road, Belmont</farmAddress> 
+				<!-- image sourced: https://png.pngtree.com/element_origin_min_pic/17/08/26/ffbb05770233df49c4bf1a27a33a89ad.jpg --> 
+				<farmLogo> images/HR_FARM_LOGO.jpg </farmLogo> 
+				<farmPhoneNumber> 0430 237 896</farmPhoneNumber>
+				<farmOwner>Kevin Bacon</farmOwner>
+				<farmEstablished>2005</farmEstablished> 
+				<numberOfEmployees>100 000</numberOfEmployees> 
+			</farm> 
+			<delivery> 
+				<currency> &USD; </currency> 
+				<minimumPrice> 15 </minimumPrice>
+				<deliveryFee> 5 </deliveryFee>
+			</delivery>
+		</goods>
+		
+	</goodsType>
+</ofm> 

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<!-- 
+	File Name: datacollection.html
+	Last Modified: 26-10-2018
+--> 
+<html>
+    <head>
+		<!-- This will be displayed on the browers title of the data collection page --> 
+		<meta charset="utf-8"> 
+		<!-- the text between the webpage will be displayed in the browser tab of the browser -->
+        <title>Data Collection Page</title>
+		<!-- Letting the browser known that an external css is being used to style the webpage -->
+		<link rel="stylesheet" href="style.css" /> 
+		<!-- Embedded styles below -->
+		<style>
+		#State {display: inline;} 
+		#container {
+			margin-left: auto;
+			margin-right: auto;
+			width: 15cm;
+			color: white;}
+		#buttons {
+		text-align:center;}
+		div {padding: 3px;}
+		</style>			
+
+		<!-- Javascript to check if the inputs from the user are valid or whether is an input at all -->
+        <script type="text/javascript">
+		// Once the user clicks submit this method will run and check to see if all of the required
+		// field are filled, if not then the user is informed of which section is missing. 
+            function checkValid() 
+            {
+				<!-- Checking there is an input for the givenName -->
+				var a = document.dataform.givenName.value;
+				if (a == "") 
+				{
+					alert("Please input your name into your name");
+					return false; 
+				}
+				
+				<!-- Checking if thers an option selected for gender option -->
+				var e = document.dataform.gender.value; 
+				if (e == "select one")
+				{
+					alert("please selected an option for gender");
+					return false; 					
+				}
+				
+				<!-- Checking to see if the provided email is valid -->
+				var b = document.dataform.email.value; 
+				var c = b.indexOf("@");
+				<!-- If the email is left empty then the user will be asked to input a valid email -->
+				if (c == -1)
+					{
+						alert("Enter a valid email"); 
+						return false; 
+					}
+				
+				<!-- Checking to see if the user has selected an option for the age range -->
+				var d = document.dataform.age; 
+				if (d[0].checked==false && d[1].checked==false && d[2].checked==false && d[3].checked==false &&
+				d[4].checked==false && d[5].checked==false)
+				{
+				alert("Please select an option for age range");
+				return false; 
+				}
+				
+				<!-- Checking to see if the user has selected a value for the quality of the webpage -->
+				var g = document.dataform.quality; 
+				if (g[0].checked==false && g[1].checked==false && g[2].checked==false && g[3].checked==false &&
+				g[4].checked==false)
+				{
+				alert("Please select an option for 'Quality of Service'");
+				return false; 
+				}
+				
+				<!-- Checking to see if the user has selected an option for the recommend question  -->
+				var f = document.dataform.recommend.value; 
+				if (f == "select one")
+				{
+					alert("please selected an option for 'Would you recommend this service to friend and family'");
+					return false; 					
+				}
+            }      
+        </script>
+
+    </head>
+    <body>
+		<!-- browser title for the webpage -->
+		<h1 style="text-align:center">Data Collection Page</h1>
+		
+		<div id="nav">
+			<hr/>
+				<nav> 
+					<a href="index.html">Home Page</a> |
+					<a href = "Fruit.xml">Fruit Farms</a> |
+					<a href = "Vegetables.xml">Vegetables Farms</a> | 
+					<a href = "datacollection.html">Data Collection</a> | 
+					<a href = "https://www.visser.com.au/blog/generic-privacy-policy-for-australian-websites/">Privacy Policy</a> |
+					<a href = "https://media.termsfeed.com/pdf/terms-and-conditions-template.pdf">Terms and Conditions</a> |
+					<a href = "https://www.blogtyrant.com/best-about-us-pages/">About us</a> |
+					<a href = "https://www.blogtyrant.com/best-contact-us-pages/">Contact</a> 
+				</nav>
+			<hr/>
+		</div> 
+		
+            <form name="dataform" method="post" action="http://evc-cit.info/cgi-bin/echoform.cgi" onSubmit="return checkValid();">
+                <div id="container"> 
+					<div style="background: rgba(0, 0, 0, 0.8); border-radius: 10px 10px 10px 10px;">  
+						<div>
+						<!-- Asks for the given names of the user -->
+							<label for="givenName">Given name(s)</label> <span style="color:red;">*</span>
+							<input type="text" name="givenName" id="givenName">
+						</div>
+						
+						<div>
+						<!-- Asks for the surname of the user -->
+							<label for="surname">Surname</label>
+							<input type="text" name="surname" id="surname"> 
+						</div>
+						
+						<!-- Asking the user for their gender -->
+						<div> 
+							 Gender: <span style="color:red;">*</span>
+							<div id="gender">
+								<select name="gender">
+										<option>select one</option>
+										<option>Male</option>
+										<option>Female</option>
+										<option>Other</option>
+									</select>
+							</div>
+						</div> 
+						
+						<!-- Asking the user for a valid email -->
+						<div>
+							<label for="email">Email</label> <span style="color:red;">*</span>
+							<input type="text" name="email" id="email"> 
+						</div>
+						
+						<!-- Asking the user for their phone number -->
+						<div>
+							<label for="phone">Phone Number:</label>
+							<input type="text" name="phone" id="phone">
+						</div>
+				
+						<!-- Asking the user for their age range -->
+						<div> 
+							Age Range: <span style="color:red;">*</span> <br>
+								<!-- Default selected to less than 20 --> 
+								<input type="radio" name="age" value="<20">&lt;20<br>
+								<input type="radio" name="age" value="20-30">20-30<br>
+								<input type="radio" name="age" value="31-40">31-40<br> 
+								<input type="radio" name="age" value="31-40">41-50<br> 
+								<input type="radio" name="age" value="31-40">51-60<br> 
+								<input type="radio" name="age" value="31-40">&gt;60 
+						</div> 
+		 
+		 				<!-- Asks for the address for users address -->
+						<div>
+							<label for="address">Address</label>
+							<input type="text" name="address" id="address">
+						</div>
+						
+						<!-- Asks for the suburb that the user lives in -->						
+						<div>
+							<label for="Suburb">Suburb</label>
+							<input type="text" name="Suburb" id="Suburb"> 
+						</div>
+						
+						<!-- Asking the user for the state they reside in -->
+						<div> 
+							 State:  
+							<div id="State">
+								<select name="State">
+										<option>select one</option>
+										<option>NSW</option>
+										<option>ACT</option>
+										<option>QLD</option>
+										<option>NT</option>
+										<option>WA</option>
+										<option>Melbourne</option>
+									</select>
+							</div>
+						</div> 
+						
+						<!-- Asks for the Postcode of the client  -->
+						<div>
+						<!-- Asks for the Postcode of the client  -->
+							<label for="postcode">Postcode</label>
+							<input type="text" name="postcode" id="postcode"> 
+						</div>
+						
+						<!-- Asking the user for the qualtiy of service provided by the website -->
+						<div> 
+							Quality of Service: <span style="color:red;">*</span> <br> 
+							(Note: 1 is the lowest and 5 is the highest) <br>  
+								<div id="quality"> 
+									<input type="radio" name="quality" value="1">1
+									<input type="radio" name="quality" value="2">2
+									<input type="radio" name="quality" value="3">3
+									<input type="radio" name="quality" value="4">4
+									<input type="radio" name="quality" value="5">5
+								</div> 
+							Comments on Quality of Service Provided <br> 
+							<textarea name="message" rows="10" cols="50">Enter Comments Here</textarea> <br> 
+							Suggestions on improvement of service <br> 
+							<textarea name="suggestions" rows="10" cols="50">Enter Comments Here</textarea> <br> 
+						</div> 
+						
+						<!-- Asking the user if they would recommendthis site to other people -->
+						<div> 
+								Would you recommend this service to friends and family:   
+								<span style="color:red;">*</span> 
+								<div id="recommend">
+									<select name="recommend">
+											<option>select one</option>
+											<option>Yes</option>
+											<option>NO</option>
+									</select>
+								</div>
+						</div> 
+						
+						<div id="buttons">
+							<input type="submit" value="Click Here to Submit"> 
+							<input type="reset" value="clear">  
+						</div>
+					</div>
+				</div> 
+			</form>
+			
+			<!-- Details about the creater of the webpage -->
+			<div class= "ffs">
+				<address id="copyright"> 
+					<b>Created by:</b> Lovekesh Singh <br>
+					<b>Last Modified:</b> 26/10/2018  <br>
+					<b>Institution:</b> <abbr title="University of Newcastle">UON</abbr> <br>
+					<b>Student No:</b> c3256655 <br>
+					<b>Email:</b> c3256655@uon.edu.au <br> 
+				</address> 
+			</div>
+    </body>
+</html>

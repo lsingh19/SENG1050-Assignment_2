@@ -1,0 +1,160 @@
+<!-- 
+File Name: index.html
+File Created: ‎13 ‎October ‎2018 
+Last Modified: 26-10-2018
+--> 
+<!DOCTYPE html>
+<html>
+   <head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css" /> 
+	<!--  letting the html file known that a external css file is being used to style the page 
+	 the following text is some of the embedded styling used in the html file -->  
+		<style> 
+		p {
+			line-height:150%; 
+			background: rgba(255, 255, 255, 1);
+			border-radius: 5px 15px 5px 15px;	
+		}
+		img{
+		clear: right;
+		}
+		</style>
+	<!-- the following code includes the title that will be displayed on the browser window's title bar  -->
+	<title>Organic Farmers Market</title>
+	</head>
+
+   <body>
+	<!-- the following is the main heading of the web page -->
+	<h1 style="text-align:center;"> 
+		Organic Farmers Market
+	</h1>
+	
+	<!-- the following code will provide navigation links on top of the webpage allowing the user to navigate throughout the webpages of the site-->
+	<div id="nav">
+		<hr>
+			<nav> 
+				<a href="index.html">Home Page</a> |
+				<a href = "Fruit.xml">Fruit Farms</a> |
+				<a href = "Vegetables.xml">Vegetables Farms</a> | 
+				<a href = "datacollection.html">Data Collection</a> | 
+				<a href = "https://www.visser.com.au/blog/generic-privacy-policy-for-australian-websites/">Privacy Policy</a> |
+				<a href = "https://media.termsfeed.com/pdf/terms-and-conditions-template.pdf">Terms and Conditions</a> |
+				<a href = "https://www.blogtyrant.com/best-about-us-pages/">About us</a> |
+				<a href = "https://www.blogtyrant.com/best-contact-us-pages/">Contact</a> 
+			</nav>
+		<hr>
+	</div> 
+
+		
+	<!-- WELCOMING PARAGRAPH FOR THE WEBSITE-->
+	<!-- the following paragraph will be styled in the external css file and has the id 'introduction' -->
+	<p id="introduction"> 
+		<span style="text-decoration:underline;"> Welcome to the Organic Farmers Market </span>  <br> 
+		Organic Farmers Market is a website developed by the University of Newcastle and <abbr title="Newcastle Eco Community">NEC</abbr> as means for many smaller
+		family farms within  the Hunter Valley Region to sell produce directly from their farm. This website advertises organic farm businesses that have their own online ordering and delivery system. 
+		This website also includes the information about the farm aswell as the produce they sell and price of the produce. 
+	</p>
+
+	<!-- The listed of farm will appear in an ordered list and between each list item there will exist a paragraph that includes the picture of the farm as well
+	as a short description about the farm and the produce it produces.
+		-->
+		
+	<!-- Farm 1 -->
+	<ol> 
+		<li><h2>Rolling Hills Estate</h2>
+				<!-- image sourced from: https://richesmi.cah.ucf.edu/omeka/files/original/644c13651919dcefe06e6827bce7a29e.jpg --> 
+			<p>
+				
+				<img src = "images/RHE_FARM.jpg" alt="Celery Farm Photo" height="150" width = "200" /> 
+				 <span> The Rolling Hills Estate </span> is a family owned estate established in 1981 and is located 2.5-hour  drive north of Sydney. 
+				 The estate is very well known throughout the Hunter Valley Region and across Australia. It is one of Australia’s largest producer of celery
+				 and operates around the clock to produce quality resources. The estate’s produce is sold only within Australia, however Rolling Hills 
+				 Estate is currently planning on expanding their business and export <b>celery</b> to Asia and Europe by the end of 2025. <br> 
+				 For more information regarding the produce that this farm sells, please check the following link: <a href = "https://en.wikipedia.org/wiki/Celery">Celery</a> 
+					<!-- the above code will display a link named Celery which will redirect the user to another website with more 
+					info about Celery's --> 
+			</p>
+			<br>
+		</li>
+		  
+		<!-- Farm 2 --> 
+		<li><h2>Oak Farm</h2> 
+			<!-- image sourced from: http://www.ncfieldfamily.org/wp-content/uploads/1760816MCSFRE1943.jpg -->
+			<p>
+			<img src = "images/OF_FARM.jpg" alt="Oak Farm Photo" height="150" width = "200" />
+			<span>Oak Farm</span>(OF), owned by Vic Rich, is one of the newest farms in the <b> watermelon </b> industry. This farm was established 18 years ago and currently has a total of 900 employees that work onsite
+			to grow and export the watermelons across Australia. The farm only exports within Australia at the moment, but intents to export internationally within the next 10 years. 
+			<abbr title="Oak Farm">OF</abbr> is currently seen as a major contender in the watermelon export industry and is set to be the leading exporter of watermelons within the next 30 to 40 years. <br>
+			For more information about watermelons: <a href = "https://en.wikipedia.org/wiki/Watermelon">Watermelons</a> 
+			<!-- the above code will display a link named watermelons which will redirect the user to another website with more 
+					info about the goods --> 
+			</p>
+			<br>
+		</li>
+		
+		<!-- Farm 3 --> 
+		<li><h2>Moonshadow Lands</h2> 
+			<!-- sourced from: https://www.healthbenefitstimes.com/9/gallery/cabbage/Cabbage-farm.jpg -->
+			<p>
+			<img src = "images/MSL_FARM.jpg" alt="Moonshadow Lands Photo" height="150" width = "200" />
+			<!-- anchor to another websire related to the farm -->
+			<span> Moonshadow Lands </span> is currently the one and only exporter of <b>cabbages</b> in Australia that directly exports cabbages to the <abbr title="United States of America">USA</abbr> only. 
+			Established in 2007 by CEO Ben Smith, Moonshadow Lands currently employs 10,000 staff members to grow, pack and export the cabbages directly to the 
+			<abbr title="United States of America">USA</abbr>. The farm is the one of the few farms across the globe that exports fresh cabbages to the <abbr title="United States of America">USA</abbr> 
+			within 2 days and also holds the title of the 'The world’s fastest and largest producer of cabbages'. This farm also produces <b>mango</b> produce, however it is only sold within 
+			Australia, as the mangoes undergo severe damage when exported overseas. Although, the company is researching in ways they can prevent the damage to the produce and hopes that a viable 
+			solution can be found soon so it can start export to the <abbr title="United States of America">USA</abbr>. <br> 
+			For more information about cabbages: <a href = "https://en.wikipedia.org/wiki/Cabbage">Cabbages</a> <br> 
+			For more information about mangos: <a href = "https://www.mango.org/">Mangos</a> 
+				<!-- the above code will display a link named cabbages and mangos which will redirect the user to another website with more 
+					info about the goods --> 
+			</p>
+		<br>
+		</li> 
+		
+		<!-- Farm 4 --> 
+		<li><h2>Black Hawk Estate</h2>
+			<!-- sourced from: https://media.istockphoto.com/photos/organic-pumpkin-farm-picture-id491681700?k=6&m=491681700&s=612x612&w=0&h=r4kQBVZUBfMjpK4f_pXXx6cPPI2XrPBPw_ObEIgjkvo= -->
+			<p>
+			<img src = "images/BHE_FARM.jpg" alt="text" height="150" width = "200" /> 
+			<span> Black Hawk Estate </span> is currently owned by <abbr title="Chief Executive Officer">CEO</abbr> Kyle Marsh, who established the farm in 1900. Kyle Marsh prides himself on
+			owning the one of the oldest <b>Pumpkin</b> producing farms in Australia and employs a total of 60,000 staff members. Although the company is one of Australia largest pumpkin producer,
+			it only exports it’s produce locally. <abbr title="Chief Executive Officer">CEO</abbr> Kyle Marsh has stated several times to media that his farm only intends to export within Australia as 
+			he wants to create jobs for only Australians and hopes to expand the number of jobs as the business continues to grow. <br> For more information about pumpkins: 
+			<a href = "https://en.wikipedia.org/wiki/Pumpkin">Pumpkin</a> 
+				<!-- the above code will display a link named pumpkins which will redirect the user to another website with more 
+					info about the goods --> 
+			</p>
+			<br>
+		</li>
+		
+		<!-- Farm 5 --> 
+		<li><h2>Haywire Ranch</h2> 
+		<!-- image sourced : https://media.gettyimages.com/photos/orchard-of-mandarin-orange-trees-picture-id543996112?b=1&k=6&m=543996112&s=612x612&w=0&h=poIB7Upr4obs-oQf5NAEu5H1plCNjSLjU7Vrxj1jje0= --> 
+			<p>
+				<img src = "images/Hr_FARM.jpg" alt="Haywire Ranch Photo" height="150" width = "200" /> 	
+				<span> Haywire Ranch </span> is a farm owned and founded by <abbr title="Chief Executive Officer">CEO</abbr> Kevin Bacon, who is known is well known across the globe for his business endeavors in fields such as 
+				technology, farms and travel. The farm was established in 2005 and has 100,000 staff members that work across the farm fields such as customer support. 
+				The farm produces some of the best <b>oranges</b> across the globe, but it only sells the oranges to the <abbr title="United States of America">USA</abbr> only. Mr Bacon is currently planning on expanding the exporting business 
+				to other countries within the next couple of years.	<br> For more information about oranges: <a href = "https://en.wikipedia.org/wiki/Orange_(fruit)">Oranges</a> 
+					<!-- the above code will display a link named oranges which will redirect the user to another website with more 
+						info about the goods --> 
+			</p>
+			<br>
+		</li>
+	</ol>
+	
+	<!-- displays the contact/address info about the author and will be styled in the external css file --> 
+	<div class= "ffs">
+		<address id="copyright"> 
+			<b>Created by:</b> Lovekesh Singh <br>
+			<b>Last Modified:</b> 26/10/2018  <br>
+			<b>Institution:</b> <abbr title="University of Newcastle">UON</abbr> <br>
+			<b>Student No:</b> c3256655 <br>
+			<b>Email:</b> c3256655@uon.edu.au <br> 
+		</address> 
+	</div>
+   </body>
+ 
+</html>

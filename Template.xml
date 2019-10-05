@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding = "utf-8"?>
+<!DOCTYPE ofm [
+	<!ELEMENT ofm (goodsType)> 
+	<!ELEMENT goodsType (goods*) >
+		<!ATTLIST goodsType sort CDATA #REQUIRED>	
+	<!ELEMENT goods (goodsName,goodsPicture,farm,delivery)> 
+	<!ELEMENT goodsName (#PCDATA)>
+	<!ELEMENT goodsPicture (#PCDATA)> 
+	<!ELEMENT farm (farmName, farmPicture,farmDescription,farmURL,farmAddress,farmLogo?,farmPhoneNumber*,farmOwner*,farmEstablished,numberOfEmployees)> 
+		<!ELEMENT farmName (#PCDATA)>
+		<!ELEMENT farmPicture (#PCDATA)>
+		<!ELEMENT farmDescription (#PCDATA)> 
+		<!ELEMENT farmURL (#PCDATA)> 
+		<!ELEMENT farmAddress (#PCDATA)> 
+		<!ELEMENT farmLogo (#PCDATA)> 
+		<!ELEMENT farmPhoneNumber (#PCDATA)> 
+		<!ELEMENT farmOwner (#PCDATA)> 
+		<!ELEMENT farmEstablished (#PCDATA)> 
+		<!ELEMENT numberOfEmployees (#PCDATA)> 
+	<!ELEMENT delivery (currency,minimumPrice,deliveryFee)> 
+		<!ELEMENT currency (#PCDATA)>
+		<!ELEMENT minimumPrice (#PCDATA)> 
+		<!ELEMENT deliveryFee (#PCDATA)> 
+	<!ENTITY AUD "Australian Dollar"> 
+	<!ENTITY USD "United States Dollar"> 
+]>
+
+<ofm> 
+	<goodsType sort=""> 
+		<goods> 
+			<goodsName>	</goodsName>
+			<goodsPicture> 	</goodsPicture> 
+			<farm> 
+				<farmName> 	</farmName>
+				<farmPicture>	</farmPicture> 
+				<farmDescription>	</farmDescription> 
+				<farmURL>	</farmURL>
+				<farmAddress> 	</farmAddress> 
+				<farmLogo>	</farmLogo> 
+				<farmPhoneNumber>	</farmPhoneNumber>
+				<farmOwner>	</farmOwner>
+				<farmEstablished>	</farmEstablished> 
+				<numberOfEmployees>	</numberOfEmployees> 
+			</farm> 
+			<delivery> 
+				<currency> </currency> 
+				<minimumPrice>  </minimumPrice>
+				<deliveryFee> </deliveryFee>
+			</delivery>
+		</goods>	
+	</goodsType>
+</ofm> 

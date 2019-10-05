@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding = "utf-8"?>
+<?xml-stylesheet type="text/xsl" href="convert.xsl"?>
+
+<!DOCTYPE ofm[
+	<!ELEMENT ofm (goodsType)> 
+	<!ELEMENT goodsType (goods*) >
+		<!ATTLIST goodsType sort CDATA #REQUIRED>	
+	<!ELEMENT goods (goodsName, goodsPicture, farm, delivery)> 
+	<!ELEMENT goodsName (#PCDATA)>
+	<!ELEMENT goodsPicture (#PCDATA)> 
+	<!ELEMENT farm (farmName, farmPicture, farmDescription, farmURL, farmAddress, farmLogo?, farmPhoneNumber, farmOwner*, farmEstablished, numberOfEmployees)> 
+		<!ELEMENT farmName (#PCDATA)>
+		<!ELEMENT farmPicture (#PCDATA)>
+		<!ELEMENT farmDescription (#PCDATA)> 
+		<!ELEMENT farmURL (#PCDATA)> 
+		<!ELEMENT farmAddress (#PCDATA)> 
+		<!ELEMENT farmLogo (#PCDATA)> 
+		<!ELEMENT farmPhoneNumber (#PCDATA)> 
+		<!ELEMENT farmOwner (#PCDATA)> 
+		<!ELEMENT farmEstablished (#PCDATA)> 
+		<!ELEMENT numberOfEmployees (#PCDATA)> 
+	<!ELEMENT delivery (currency, minimumPrice, deliveryFee)> 
+		<!ELEMENT currency (#PCDATA)>
+		<!ELEMENT minimumPrice (#PCDATA)> 
+		<!ELEMENT deliveryFee (#PCDATA)> 
+	<!ENTITY AUD "Australian Dollar"> 
+	<!ENTITY USD "United States Dollar"> 
+]>
+
+<ofm> 
+	<goodsType sort="Vegetables"> 
+		<goods> 
+		<!-- Farm 1 --> 
+			<goodsName>Celery</goodsName>
+			<!-- image sourced: "https://www.google.com.au/search?tbm=isch&q=celery&spell=1&sa=X&ved=0ahUKEwiTm_SCtKDeAhUBVysKHT5iCIUQBQg7KAA&biw=1368&bih=771&dpr=2#imgrc=byqV3BFhdJGeBM:" -->
+			<goodsPicture> images/celery.jpg</goodsPicture> 
+			<farm> 
+				<farmName>Rolling Hills Estate</farmName>
+				<farmPicture>images/RHE_FARM.jpg</farmPicture> 
+				<farmDescription>
+					The Rolling Hills Estate is a family owned estate established in 1981 and is located 2.5-hour drive north of Sydney. The estate is very well known throughout 
+					the Hunter Valley Region and across Australia. It is one of Australias largest producer of celery and operates around the clock to produce quality resources. 
+					The estates produce is sold only within Australia, however Rolling Hills Estate is currently planning on expanding their business and export celery to Asia and 
+					Europe by the end of 2025. 
+					</farmDescription> 
+				<farmURL>www.RollingHillsEstate.org</farmURL>
+				<farmAddress> 123 Rollin Road, Rolling Hills</farmAddress> 
+				<!-- image sourced: "https://www.google.com.au/search?biw=1368&bih=722&tbm=isch&sa=1&ei=vRfRW6-hIoawrQGGoJHAAg&q=celery+logo&oq=celery+logo&gs_l=img.3..0.59450.61732.0.62041.9.8.1.0.0.0.177.711.0j5.5.0....0...1c.1.64.img..3.4.451...0i67k1.0.w6dGxFZLNqw#imgrc=SscEhEhSyG7PfM:" -->
+				<farmLogo>images/RHE_FARM_LOGO.jpg</farmLogo> 
+				<farmPhoneNumber> 045 765 342</farmPhoneNumber>
+				<farmOwner>Kevin Hills</farmOwner>
+				<farmEstablished>1981</farmEstablished> 
+				<numberOfEmployees>500</numberOfEmployees> 
+			</farm> 
+			<delivery> 
+				<currency> &AUD; </currency> 
+				<minimumPrice> 20 </minimumPrice>
+				<deliveryFee> 3</deliveryFee>
+			</delivery>
+		</goods>
+		
+		<!-- Farm 2 --> 
+		<goods> 
+			<goodsName>Cabbage</goodsName>
+			<!-- image sourced: https://www.google.com.au/search?biw=1368&bih=722&tbm=isch&sa=1&ei=_BfRW7_pJJjc9QOO1Zm4BA&q=cabbage&oq=cabbage&gs_l=img.3..0i67k1l4j0j0i67k1j0l3j0i67k1.137906.138701.0.138934.7.6.0.1.1.0.142.409.0j3.3.0....0...1c.1.64.img..3.4.410....0.MuiQJUZdJLI#imgrc=bCKxlGhk-c1NHM: --> 
+			<goodsPicture>images/cabbage.jpg</goodsPicture> 
+			<farm> 
+				<farmName>Moonshadow Lands</farmName> 
+				<!-- sourced from: https://www.healthbenefitstimes.com/9/gallery/cabbage/Cabbage-farm.jpg -->
+				<farmPicture>images/MSL_FARM.jpg</farmPicture> 
+				<farmDescription> 
+					Moonshadow Lands is currently the one and only exporter of cabbages in Australia that directly exports cabbages to the USA only. Established in 2007 by CEO Ben Smith, 
+					Moonshadow Lands currently employs 10,000 staff members to grow, pack and export the cabbages directly to the USA. The farm is the one of the few farms across the globe 
+					that exports fresh cabbages to the USA within 2 days and also holds the title of The worlds fastest and largest producer of cabbages. This farm also produces mango 
+					produce, however it is only sold within Australia, as the mangoes undergo severe damage when exported overseas. Although, the company is researching in ways they can 
+					prevent the damage to the produce and hopes that a viable solution can be found soon so it can start export to the USA. 
+					</farmDescription> 
+				<farmURL>www.moonshadowslands.org.au</farmURL>
+				<farmAddress>179_Moon Drive,Moon</farmAddress> 
+				<!-- image sourced: "https://www.google.com.au/search?biw=1368&bih=722&tbm=isch&sa=1&ei=Tg_RW8m8Ncm4rQHI35mQDw&q=logo+&oq=logo+&gs_l=img.3...622431.623128.0.623307.5.5.0.0.0.0.0.0..0.0....0...1c.1.64.img..5.0.0....0.ywiBRAeFdTQ#imgrc=v-xX8eVFr0ujEM:" -->
+				<farmLogo> images/MSL_FARM_LOGO.jpg</farmLogo> 
+				<farmPhoneNumber>045 678 368</farmPhoneNumber>
+				<farmOwner>Ben Smith</farmOwner>
+				<farmEstablished>2007</farmEstablished> 
+				<numberOfEmployees>10 000</numberOfEmployees> 
+			</farm> 
+			<delivery> 
+				<currency> &USD; </currency> 
+				<minimumPrice>20</minimumPrice>
+				<deliveryFee>15</deliveryFee>
+			</delivery>
+		</goods>
+		
+		<!-- Farm 3 --> 
+		<goods> 
+			<goodsName>Pumpkin</goodsName>
+			<!-- image sourced: https://www.google.com.au/search?biw=1368&bih=722&tbm=isch&sa=1&ei=iBjRW6r4IdS99QPT0IDQAw&q=pumpkin&oq=pumpkin&gs_l=img.3...184342.185480.0.185849.7.7.0.0.0.0.133.133.0j1.1.0....0...1c.1.64.img..6.1.131...0i67k1.0.cZzsTTKD9rA#imgrc=ypP2BMz2060izM: --> 
+			<goodsPicture> images/pumpkin.jpg</goodsPicture> 
+			<farm> 
+				<farmName>Black Hawk Estate</farmName>
+				<farmPicture>images/BHE_FARM.jpg</farmPicture> 
+				<farmDescription> 
+					Haywire Ranch is a farm owned and founded by CEO Kevin Bacon, who is known is well known across the globe for his business endeavours in fields such as technology, 
+					farms and travel. The farm was established in 2005 and has 100,000 staff members that work across the farm fields such as customer support. The farm produces some 
+					of the best oranges across the globe, but it only sells the oranges to the USA only. Mr Bacon is currently planning on expanding the exporting business to other countries 
+					within the next couple of years. 
+				</farmDescription> 
+				<farmURL>www.BlackHawkEstate.com.au</farmURL>
+				<farmAddress> 789 Hawk Street, Hawk</farmAddress> 
+				<!-- image sourced: https://www.google.com.au/search?biw=1368&bih=722&tbm=isch&sa=1&ei=iBjRW6r4IdS99QPT0IDQAw&q=pumpkin&oq=pumpkin&gs_l=img.3...184342.185480.0.185849.7.7.0.0.0.0.133.133.0j1.1.0....0...1c.1.64.img..6.1.131...0i67k1.0.cZzsTTKD9rA#imgrc=1svODmE6jDj0xM: -->
+				<farmLogo>images/BHE_FARM_LOGO.jpg</farmLogo> 
+				<farmPhoneNumber>049 346 267</farmPhoneNumber>
+				<farmOwner>Kyle Marsh</farmOwner>
+				<farmEstablished>1900</farmEstablished> 
+				<numberOfEmployees>60 000</numberOfEmployees> 
+			</farm> 
+			<delivery> 
+				<currency> &AUD; </currency> 
+				<minimumPrice> 8 </minimumPrice>
+				<deliveryFee> 20 </deliveryFee>
+			</delivery>
+		</goods>	
+	</goodsType>
+</ofm> 
